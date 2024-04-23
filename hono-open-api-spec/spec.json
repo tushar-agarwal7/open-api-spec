@@ -1,0 +1,218 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "My API"
+    },
+    "components": {
+      "schemas": {
+  
+      },
+      "parameters": {
+  
+      }
+    },
+    "paths": {
+      "/users/{id}": {
+        "get": {
+          "parameters": [
+            {
+              "schema": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 10,
+                "example": "123"
+              },
+              "required": true,
+              "name": "id",
+              "in": "path"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Retrieve the user",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 10,
+                        "example": "john"
+                      },
+                      "age": {
+                        "type": "integer",
+                        "example": 12
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 10,
+                        "example": "24"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "age",
+                      "id"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "parameters": [
+            {
+              "schema": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 10,
+                "example": "123"
+              },
+              "required": true,
+              "name": "id",
+              "in": "path"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Retrieve the user",
+              "z": {
+                "EMPTY_PATH": [],
+                "INVALID": {
+                  "status": "aborted"
+                },
+                "util": {
+  
+                },
+                "objectUtil": {
+  
+                },
+                "ZodParsedType": {
+                  "string": "string",
+                  "nan": "nan",
+                  "number": "number",
+                  "integer": "integer",
+                  "float": "float",
+                  "boolean": "boolean",
+                  "date": "date",
+                  "bigint": "bigint",
+                  "symbol": "symbol",
+                  "function": "function",
+                  "undefined": "undefined",
+                  "null": "null",
+                  "array": "array",
+                  "object": "object",
+                  "unknown": "unknown",
+                  "promise": "promise",
+                  "void": "void",
+                  "never": "never",
+                  "map": "map",
+                  "set": "set"
+                },
+                "late": {
+  
+                },
+                "ZodFirstPartyTypeKind": {
+                  "ZodString": "ZodString",
+                  "ZodNumber": "ZodNumber",
+                  "ZodNaN": "ZodNaN",
+                  "ZodBigInt": "ZodBigInt",
+                  "ZodBoolean": "ZodBoolean",
+                  "ZodDate": "ZodDate",
+                  "ZodSymbol": "ZodSymbol",
+                  "ZodUndefined": "ZodUndefined",
+                  "ZodNull": "ZodNull",
+                  "ZodAny": "ZodAny",
+                  "ZodUnknown": "ZodUnknown",
+                  "ZodNever": "ZodNever",
+                  "ZodVoid": "ZodVoid",
+                  "ZodArray": "ZodArray",
+                  "ZodObject": "ZodObject",
+                  "ZodUnion": "ZodUnion",
+                  "ZodDiscriminatedUnion": "ZodDiscriminatedUnion",
+                  "ZodIntersection": "ZodIntersection",
+                  "ZodTuple": "ZodTuple",
+                  "ZodRecord": "ZodRecord",
+                  "ZodMap": "ZodMap",
+                  "ZodSet": "ZodSet",
+                  "ZodFunction": "ZodFunction",
+                  "ZodLazy": "ZodLazy",
+                  "ZodLiteral": "ZodLiteral",
+                  "ZodEnum": "ZodEnum",
+                  "ZodEffects": "ZodEffects",
+                  "ZodNativeEnum": "ZodNativeEnum",
+                  "ZodOptional": "ZodOptional",
+                  "ZodNullable": "ZodNullable",
+                  "ZodDefault": "ZodDefault",
+                  "ZodCatch": "ZodCatch",
+                  "ZodPromise": "ZodPromise",
+                  "ZodBranded": "ZodBranded",
+                  "ZodPipeline": "ZodPipeline",
+                  "ZodReadonly": "ZodReadonly"
+                },
+                "coerce": {
+  
+                },
+                "NEVER": {
+                  "status": "aborted"
+                },
+                "ZodIssueCode": {
+                  "invalid_type": "invalid_type",
+                  "invalid_literal": "invalid_literal",
+                  "custom": "custom",
+                  "invalid_union": "invalid_union",
+                  "invalid_union_discriminator": "invalid_union_discriminator",
+                  "invalid_enum_value": "invalid_enum_value",
+                  "unrecognized_keys": "unrecognized_keys",
+                  "invalid_arguments": "invalid_arguments",
+                  "invalid_return_type": "invalid_return_type",
+                  "invalid_date": "invalid_date",
+                  "invalid_string": "invalid_string",
+                  "too_small": "too_small",
+                  "too_big": "too_big",
+                  "invalid_intersection_types": "invalid_intersection_types",
+                  "not_multiple_of": "not_multiple_of",
+                  "not_finite": "not_finite"
+                }
+              },
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 10,
+                        "example": "john"
+                      },
+                      "age": {
+                        "type": "integer",
+                        "example": 12
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 10,
+                        "example": "24"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "age",
+                      "id"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
